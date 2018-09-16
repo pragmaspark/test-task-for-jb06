@@ -69,6 +69,7 @@ func ParseCommandLine () []string {
     return lines
 }
 
+
 func main () {
     lines := []string{}
 
@@ -81,10 +82,6 @@ func main () {
     for i := 0; i < len(cmdLines); i++ {
         lines = append(lines, cmdLines[i])
     }
-
-//     lines := []string{
-//       `{ "action": "start", "task": "abc"}`,
-//       `{"action":"message", "text": "123"}`}
 
     jsonLines := ParsingStrings(lines)
     PrintAction(jsonLines)
